@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        /* Personal Info Styles */
+        .personal-info {
+            text-align: center;
+            padding: 2em;
+        }
+
+        /* Projects Section Styles */
+        section {
+            padding: 2em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        .project {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .project-details {
+            padding: 1em;
+        }
+
+        /* Media Query for Responsiveness */
+        @media (max-width: 768px) {
+            .project {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rushikesh Patil - Portfolio</h1>
+    </header>
+
+    <section class="personal-info">
+        <h2>About Me</h2>
+        <p>Welcome to my portfolio! I am a passionate student with a keen interest in building Projects. I love working on projects that challenge me and help me grow as a Computer Engineer. Feel free to explore my work below and get in touch!</p>
+        <p>Contact: patilrushi136@gmail.com</p>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project" onclick="openProject('guessNum')">
+            <img src="https://thumbs.dreamstime.com/z/concept-mathematical-brain-logo-man-color-random-numbers-43913308.jpg?w=768" alt="Project 1">
+            <div class="project-details">
+                <h3>Guess Number</h3>
+                <p>Guess the number between 1 to 100 in 10 chances</p>
+            </div>
+        </div>
+
+        <div class="project" onclick="openProject('colorChanger')">
+            <img src="https://play-lh.googleusercontent.com/HjBFtuM3fAUhD3GCW8NKftu7UnNJWGVxA_FFGu8HiZECyurVti9bFLrvi3AFdMFxIg" alt="Project 2">
+            <div class="project-details">
+                <h3>Color Changer</h3>
+                <p>Change Color of Background on a click or touch</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function openProject(projectName) {
+            // Add logic to navigate to the specific project page or display more details
+            // You can use window.location.href or show a modal, etc.
+            // alert(`Open ${projectName}`);
+            window.location.href = `${projectName}.html`;
+        }
+    </script>
+</body>
+
+</html>
